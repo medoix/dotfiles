@@ -3,6 +3,8 @@
 BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
 SUB_COMMAND_NAME=$2
+SHELL=/bin/bash
+OS=$($SHELL bin/is-supported bin/is-macos macos linux)
 
 sub_help () {
   echo "Usage: $BIN_NAME <command>"
@@ -27,18 +29,22 @@ sub_test () {
 }
 
 sub_update () {
-  sudo softwareupdate -i -a
-  brew update
-  brew upgrade
-  npm install npm -g
-  npm update -g
-  gem update --system
-  gem update
+  if [ $OS = "macos" ]; then
+    sudo softwareupdate -i -a
+    brew update
+    brew upgrade
+    gem update --system
+    gem update
+  fi
+  sudo npm install npm -g
+  sudo npm update -g
 }
 
 sub_clean () {
-  brew cleanup
-  gem cleanup
+  if [ $OS = "macos" ]; then
+    brew cleanup
+    gem cleanup
+  fi
   . "$NVM_DIR/nvm.sh"; nvm cache clear
 }
 
