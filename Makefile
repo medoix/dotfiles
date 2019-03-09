@@ -12,14 +12,15 @@ all: $(OS)
 
 macos: sudo core-macos packages-macos link
 
-linux: core-linux link
+linux: core-linux packages-linux link
 
 core-macos: brew bash git npm ruby
 
 core-linux:
-	apt-get update
-	apt-get upgrade -y
-	apt-get dist-upgrade -f
+	sudo apt-get update
+	sudo apt-get upgrade -y
+	sudo apt-get dist-upgrade -f
+	# apt-get install -y bats
 
 stow-macos: brew
 	is-executable stow || brew install stow
@@ -30,6 +31,8 @@ stow-linux: core-linux
 sudo:
 	sudo -v
 	while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+packages-linux: apt-packages node-packages
 
 packages-macos: brew-packages cask-apps node-packages gems
 
@@ -61,6 +64,9 @@ npm:
 
 ruby: brew
 	brew install ruby
+
+apt-packages:
+	sudo apt-get install -y bats
 
 brew-packages: brew
 	brew bundle --file=$(DOTFILES_DIR)/install/Brewfile
