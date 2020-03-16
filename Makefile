@@ -12,21 +12,18 @@ all: $(OS)
 
 macos: sudo core-macos packages-macos link
 
-linux: core-linux packages-linux link
+linux: sudo core-linux packages-linux link
 
 core-macos: brew bash git npm ruby
 
 core-linux:
-	sudo apt-get update
-	sudo apt-get upgrade -y
-	sudo apt-get dist-upgrade -f
-	# apt-get install -y bats
-
-stow-macos: brew
+	apt update && apt upgrade -y
+	
+stow-macos:
 	is-executable stow || brew install stow
 
-stow-linux: core-linux
-	is-executable stow || apt-get -y install stow
+stow-linux:
+	is-executable stow || apt -y install stow
 
 sudo:
 	sudo -v
@@ -65,8 +62,8 @@ npm:
 ruby: brew
 	brew install ruby
 
-apt-packages:
-	sudo apt-get install -y bats
+apt-packages: sudo
+	apt install -y bats
 
 brew-packages: brew
 	brew bundle --file=$(DOTFILES_DIR)/install/Brewfile
