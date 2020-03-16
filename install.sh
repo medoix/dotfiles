@@ -17,6 +17,9 @@ elif is_executable "wget"; then
   CMD="wget --no-check-certificate -O - $TARBALL | $TAR_CMD"
 fi
 
+cd $TARGET
+make
+
 if [ -z "$CMD" ]; then
   echo "No git, curl or wget available. Aborting."
 else
