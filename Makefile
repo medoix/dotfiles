@@ -31,7 +31,7 @@ sudo:
 
 packages-linux: apt-packages node-packages
 
-packages-macos: brew-packages cask-apps node-packages gems
+packages-macos: brew-packages cask-apps node-packages
 
 link: stow-$(OS)
 	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then mv -v $(HOME)/$$FILE{,.bak}; fi; done
@@ -45,7 +45,7 @@ unlink: stow-$(OS)
 	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE.bak ]; then mv -v $(HOME)/$$FILE.bak $(HOME)/$${FILE%%.bak}; fi; done
 
 brew:
-	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
+	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install
 
 bash: BASH=/usr/local/bin/bash
 bash: SHELLS=/private/etc/shells
@@ -58,9 +58,6 @@ git: brew
 npm:
 	if ! [ -d $(NVM_DIR)/.git ]; then git clone https://github.com/creationix/nvm.git $(NVM_DIR); fi
 	. $(NVM_DIR)/nvm.sh; nvm install --lts
-
-ruby: brew
-	brew install ruby
 
 apt-packages:
 	sudo apt install -y bats
@@ -75,9 +72,6 @@ cask-apps: brew
 
 node-packages: npm
 	. $(NVM_DIR)/nvm.sh; npm install -g $(shell cat install/npmfile)
-
-gems: ruby
-	export PATH="/usr/local/opt/ruby/bin:$PATH"; gem install $(shell cat install/Gemfile)
 
 test:
 	bats test/*.bats
