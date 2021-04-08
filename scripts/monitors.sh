@@ -7,12 +7,3 @@ if xrandr | grep "$extern disconnected"; then
 else
     xrandr --output "$intern" --off --output "$extern" --auto
 fi
-
-if grep -q "^flags.*hypervisor" /proc/cpuinfo; then
-    VBoxClient --clipboard
-    VBoxClient --draganddrop
-    VBoxClient --seamless
-    VBoxClient --checkhostversion
-    VBoxClient --vmsvga
-    #xrandr --output Virtual1 --mode 1920x1200
-fi
