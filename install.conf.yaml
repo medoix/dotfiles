@@ -6,6 +6,8 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.xinitrc:
+    ~/.zprofile:
 
 - create:
     - ~/downloads
