@@ -1,0 +1,8 @@
+[user]
+name = medoix
+email = medoix@shivv.com
+[push]
+        default = simple
+
+[url "git@gitlab.com:"]
+insteadOf = https://gitlab.com/
