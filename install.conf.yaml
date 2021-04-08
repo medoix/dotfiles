@@ -6,12 +6,14 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.scripts:
     ~/.xinitrc:
     ~/.zprofile:
     ~/.zshrc:
 
 - create:
     - ~/downloads
+    - ~/.images
     - ~/projects
     - ~/.vim/undo-history
 
