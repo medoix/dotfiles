@@ -1,6 +1,13 @@
 [user]
 name = medoix
 email = medoix@shivv.com
+
+[github]
+	user = medoix
+
+[gitlab]
+	user = medoix
+        
 [push]
         default = simple
 
