@@ -6,6 +6,9 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.config/:
+        glob: true
+        path: config/*
     ~/.gitconfig:
     ~/.scripts:
     ~/.xinitrc:
