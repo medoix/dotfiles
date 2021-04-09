@@ -21,11 +21,6 @@ alias h='htop'
 # Show OS info when opening a new terminal
 neofetch
 
-# If running in VirtualBox configure the guest toos
-if grep -q "^flags.*hypervisor" /proc/cpuinfo; then
-    source ~/.scripts/virtual.sh
-fi
-
 # Font mode for powerlevel9k
 P9K_MODE="nerdfont-complete"
 
