@@ -36,6 +36,8 @@ bindsym $mod+Shift+q kill
 
 # Start rofi
 bindsym $mod+d exec rofi -show drun -columns 3
+bindsym $mod+b exec firefox
+bindsym $mod+m exec spotify
 
 # Move between windows
 bindsym $mod+j focus left
@@ -124,7 +126,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace0
 assign [class="firefox"] $workspace1
 assign [class="Alacritty"] $workspace3
 assign [class="VirtualBox"] $workspace5
-assign [class="spotify"] $workspace8
+for_window [class="Spotify"] move to workspace $workspace8
 
 # Enable float for some windows
 for_window [class="^Pavucontrol$"] floating enable
