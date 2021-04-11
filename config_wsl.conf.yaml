@@ -6,10 +6,10 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.config/bat:
-    ~/.config/neofetch:
-    ~/.config/nvim:
-    ~/.config/ranger:
+    ~/.config/bat: config/bat
+    ~/.config/neofetch: config/neofetch
+    ~/.config/nvim: config/nvim
+    ~/.config/ranger: config/ranger
     ~/.gitconfig:
     ~/.oh-my-zsh: ohmyzsh
     ~/.oh-my-zsh/custom:
