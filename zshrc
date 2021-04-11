@@ -29,7 +29,7 @@ P9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
 P9K_RIGHT_PROMPT_ELEMENTS=(background_jobs go_version virtualenv)
 
 # Set Oh-My-Zsh location.
-ZSH=$HONE/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
