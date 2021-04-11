@@ -26,5 +26,4 @@
     - ~/.vim/undo-history
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
   - [curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -, Adding Spotify GPG Key]

@@ -28,7 +28,9 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
-git submodule update --init --recursive "${DOTBOT_DIR}"
+
+# Initialize all Submodules
+git submodule update --init --recursive
 
 # Windows SubSystem Linux
 CONFIG_WSL="config_wsl.conf.yaml"
