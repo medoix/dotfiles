@@ -7,10 +7,14 @@
 
 - link:
     ~/.config/bat:
-    ~/config/neofetch:
-    ~/config/nvim:
-    ~/config/ranger:
+    ~/.config/neofetch:
+    ~/.config/nvim:
+    ~/.config/ranger:
     ~/.gitconfig:
+    ~/.oh-my-zsh: ohmyzsh
+    ~/.oh-my-zsh/custom:
+        path: ohmyzsh-custom
+        force: true
     ~/.scripts:
     ~/.zshrc:
 
