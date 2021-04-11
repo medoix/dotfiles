@@ -21,4 +21,3 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service]

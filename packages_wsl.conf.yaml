@@ -33,3 +33,5 @@
   - xbindkeys
 - snap:
   - gotop
+- shell:
+  - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring Docker Service and Group]

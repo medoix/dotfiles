@@ -10,6 +10,10 @@
         glob: true
         path: config/*
     ~/.gitconfig:
+    ~/.oh-my-zsh: ohmyzsh
+    ~/.oh-my-zsh/custom:
+        path: ohmyzsh-custom
+        force: true
     ~/.scripts:
     ~/.xinitrc:
     ~/.zprofile:
@@ -24,4 +28,3 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -, Adding Spotify GPG Key]
-  - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service]

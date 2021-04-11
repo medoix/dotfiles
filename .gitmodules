@@ -5,3 +5,21 @@
 [submodule "dotbot-yay"]
 	path = dotbot-yay
 	url = https://github.com/alexwh/dotbot-yay
+[submodule "ohmyzsh"]
+	path = ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh
+[submodule "ohmyzsh-custom/themes/powerlevel9k"]
+	path = ohmyzsh-custom/themes/powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k
+[submodule "ohmyzsh-custom/plugins/zsh-autosuggestions"]
+	path = ohmyzsh-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "ohmyzsh-custom/plugins/zsh-history-substring-search"]
+	path = ohmyzsh-custom/plugins/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule "ohmyzsh-custom/plugins/zsh-syntax-highlighting"]
+	path = ohmyzsh-custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "ohmyzsh-custom/plugins/zsh-completions"]
+	path = ohmyzsh-custom/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
