@@ -1,4 +1,4 @@
-- apt:
+- pacman:
   # Base Packages 
   - atool
   - bat
@@ -31,7 +31,7 @@
   - evince
   - npm
   - xbindkeys
-- snap:
+- yay:
   - gotop
 - shell:
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring Docker Service and Group]
