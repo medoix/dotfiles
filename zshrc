@@ -15,7 +15,6 @@ alias lt='ls --tree'
 alias ip='ip -c'
 alias rm='rm -i'
 alias x='ranger'
-alias c='cmus'
 alias h='htop'
 alias cat='bat'
 
