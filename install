@@ -22,10 +22,7 @@ do
     esac
 done
 
-CONFIG="install.conf.yaml"
-PACKAGES="packages.conf.yaml"
 DOTBOT_DIR="dotbot"
-
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -33,8 +30,22 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}"
+# Windows SubSystem Linux
+CONFIG_WSL="config_wsl.conf.yaml"
+PACKAGES_WSL="packages_wsl.conf.yaml"
+if [[ $(uname -r) =~ microsoft ]]; then
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_WSL}"
+    if [ "$packagesFlag" ]; then
+        "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES_WSL}" --plugin-dir "${BASEDIR}/dotbot-yay"
+    fi
+fi
 
-if [ "$packagesFlag" ]; then
-    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES}" --plugin-dir "${BASEDIR}/dotbot-yay"
+# Arch Linux
+CONFIG_ARCH="config_arch.conf.yaml"
+PACKAGES_ARCH="packages_arch.conf.yaml"
+if [[ $(uname -r) =~ arch ]]; then
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_ARCH}"
+    if [ "$packagesFlag" ]; then
+        "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES_ARCH}" --plugin-dir "${BASEDIR}/dotbot-yay"
+    fi
 fi
