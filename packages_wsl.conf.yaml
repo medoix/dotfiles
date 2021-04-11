@@ -1,0 +1,35 @@
+- apt:
+  # Base Packages 
+  - atool
+  - bat
+  - curl
+  - dhcpcd
+  - docker
+  - ffmpegthumbnailer
+  - git
+  - go-pie
+  - go-tools
+  - highlight
+  - htop
+  - jq
+  - less
+  - lsd
+  - neofetch
+  - neovim
+  - odt2txt
+  - openvpn
+  - poppler
+  - ranger
+  - reflector
+  - tmux
+  - whois
+  - zsh
+  # GUI Packages
+  - adobe-source-code-pro-fonts
+  - discount
+  - emacs
+  - evince
+  - npm
+  - xbindkeys
+- snap:
+  - gotop
