@@ -66,14 +66,14 @@ interval=2
 label=<span color="#f1fa8c"> </span>
 
 [volume]
-command=if [ $button ]; then pavucontrol; else pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'; fi
+command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'; if [ $button ]; then pavucontrol;  fi
 interval=1
 label=<span color="#ffb86c"> </span>
 
 [time_aest]
 command=TZ=":Australia/Sydney" date '+%I:%M %Z'
 interval=1
-label=<span color="#555555"></span>
+label=<span color="#555555"> </span>
 
 [time_pst]
 command=TZ=":US/Pacific" date '+%I:%M %Z'
@@ -91,7 +91,7 @@ interval=1
 label=<span color="#bd93f9"> </span>
 
 [date]
-command=date '+%Y年%B%d日 %A'
+command=date '+%A  %B %d  %Y'
 interval=60
 label=<span color="#8be9fd"> </span>
 
