@@ -4,6 +4,13 @@
 #  / /_\__ \ | | | | | (__
 # /____|___/_| |_|_|  \___|
 
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Aliases for a few useful commands
 alias mirrorUpdate='sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias pacmanGhost='~/.scripts/pacman.sh'
@@ -22,11 +29,11 @@ alias cat='bat'
 neofetch
 
 # Font mode for powerlevel10k
-P9K_MODE="nerdfont-complete"
+#P9K_MODE="nerdfont-complete"
 
 # Prompt elements
-P9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
-P9K_RIGHT_PROMPT_ELEMENTS=(background_jobs go_version virtualenv)
+#P9K_LEFT_PROMPT_ELEMENTS=(custom_user dir vcs)
+#P9K_RIGHT_PROMPT_ELEMENTS=(background_jobs go_version virtualenv)
 
 # Set Oh-My-Zsh location.
 ZSH=$HOME/.oh-my-zsh
@@ -34,30 +41,30 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Prompt settings
-P9K_PROMPT_ON_NEWLINE=true
-P9K_RPROMPT_ON_NEWLINE=true
+#P9K_PROMPT_ON_NEWLINE=true
+#P9K_RPROMPT_ON_NEWLINE=true
 P9K_MULTILINE_FIRST_PROMPT_PREFIX_ICON=$'%K{white}%k'
 P9K_MULTILINE_LAST_PROMPT_PREFIX_ICON=$'%K{green}%F{black} \uf155 %f%F{green}%k\ue0b0%f '
 
 # Separators
-P9K_LEFT_SEGMENT_SEPARATOR_ICON=$'\ue0b0'
-P9K_LEFT_SUBSEGMENT_SEPARATOR_ICON=$'\ue0b1'
-P9K_RIGHT_SEGMENT_SEPARATOR_ICON=$'\ue0b2'
-P9K_RIGHT_SUBSEGMENT_SEPARATOR_ICON=$'\ue0b7'
+#P9K_LEFT_SEGMENT_SEPARATOR_ICON=$'\ue0b0'
+#P9K_LEFT_SUBSEGMENT_SEPARATOR_ICON=$'\ue0b1'
+#P9K_RIGHT_SEGMENT_SEPARATOR_ICON=$'\ue0b2'
+#P9K_RIGHT_SUBSEGMENT_SEPARATOR_ICON=$'\ue0b7'
 
 # Dir colours
-P9K_DIR_HOME_BACKGROUND='black'
-P9K_DIR_HOME_FOREGROUND='white'
-P9K_DIR_HOME_SUBFOLDER_BACKGROUND='black'
-P9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
-P9K_DIR_DEFAULT_BACKGROUND='yellow'
-P9K_DIR_DEFAULT_FOREGROUND='black'
-P9K_DIR_SHORTEN_LENGTH=2
-P9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
+#P9K_DIR_HOME_BACKGROUND='black'
+#P9K_DIR_HOME_FOREGROUND='white'
+#P9K_DIR_HOME_SUBFOLDER_BACKGROUND='black'
+#P9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
+#P9K_DIR_DEFAULT_BACKGROUND='yellow'
+#P9K_DIR_DEFAULT_FOREGROUND='black'
+#P9K_DIR_SHORTEN_LENGTH=2
+#P9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
 
 # OS segment
-P9K_OS_ICON_BACKGROUND='black'
-P9K_LINUX_ICON='%F{cyan} \uf303 %F{white} arch %F{cyan}linux%f'
+#P9K_OS_ICON_BACKGROUND='black'
+#P9K_LINUX_ICON='%F{cyan} \uf303 %F{white} arch %F{cyan}linux%f'
 
 # VCS icons
 P9K_VCS_GIT_ICON=$'\uf1d2 '
@@ -136,4 +143,5 @@ plugins=(
 
 setopt HIST_IGNORE_SPACE
 autoload -U compinit && compinit
-source $ZSH/oh-my-zsh.sh
+[[ ! -f $ZSH/oh-my-zsh.sh ]] || source $ZSH/oh-my-zsh.sh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -15,6 +15,7 @@
     ~/.oh-my-zsh/custom:
         path: ohmyzsh-custom
         force: true
+    ~/.p10k.zsh:
     ~/.scripts:
     ~/.zshrc:
 
