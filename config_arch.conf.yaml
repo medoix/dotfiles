@@ -9,6 +9,7 @@
     ~/.config/:
         glob: true
         path: config/*
+        force: true
     ~/.gitconfig:
     ~/.oh-my-zsh: ohmyzsh
     ~/.oh-my-zsh/custom:
