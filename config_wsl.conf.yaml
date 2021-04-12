@@ -17,6 +17,7 @@
         force: true
     ~/.p10k.zsh:
     ~/.scripts:
+    ~/.ssh:
     ~/.zshrc:
 
 - create:
