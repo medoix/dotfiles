@@ -17,7 +17,12 @@ It utilises
 
 # Setup
 ## Arch Standlone
-
+- Download Arch ISO and create bootable USB.
+- Boot into Arch ISO and run `archinstall`.
+- Follow steps and install `git` and `python3` for additional packages.
+- Follow more steps.
+- Enter to confirm config and commence install.
+- Once install has completed, remove install media and `reboot`
 
 ## Arch WSL
 - Download the latest `Arch.zip` at [Arch WSL](https://github.com/yuk7/ArchWSL/releases/)
@@ -47,7 +52,26 @@ It utilises
         "name": "Arch",
         "source": "Windows.Terminal.Wsl",
         "fontSize": 11,
-        "fontFace": "SauceCodePro NF"
+        "fontFace": "SauceCodePro NF",
+        "background": "#282a36",
+        "foreground": "#f8f8f2",
+        "cursorColor":"#f8f8f2",
+        "black": "#272822",
+        "red": "#F92672",
+        "green": "#A6E22E",
+        "yellow": "#F4BF75",
+        "blue": "#66D9EF",
+        "purple": "#AE81FF",
+        "cyan": "#A1EFE4",
+        "white": "#F8F8F2",
+        "brightBlack": "#75715E",
+        "brightRed": "#F92672",
+        "brightGreen": "#A6E22E",
+        "brightYellow": "#F4BF75",
+        "brightBlue": "#66D9EF",
+        "brightPurple": "#AE81FF",
+        "brightCyan": "#A1EFE4",
+        "brightWhite": "#F9F8F5"
     }
 ---
 - Set the Arch `guid` to be the default `defaultProfile`
@@ -74,7 +98,11 @@ Use the [Makefile](./Makefile) to install everything [listed above](#package-ove
     cd ~/.dotfiles
     make
 
-## Post-install
+## Post-Setup
+
+- Login to the user you created above in the Arch installer.
+- Download Dotfiles `git clone https://gitlab.com/medoix/dotfiles .dotfiles`
+- Run Dotfiles installer to configure and install everything `cd .dotfiles && ./install -p`
 
 * `dotfiles dock` (set [Dock items](./macos/dock.sh))
 * `dotfiles macos` (set [macOS defaults](./macos/defaults.sh))
