@@ -51,3 +51,11 @@ if [[ $(uname -r) =~ arch ]]; then
         "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES_ARCH}" --plugin-dir "${BASEDIR}/dotbot-yay"
     fi
 fi
+
+# Additional Packages for VirtualBox
+PACKAGES_VIRTUALBOX="packages_virtualbox.conf.yaml"
+if grep -q "^flags.*hypervisor" /proc/cpuinfo; then
+    if [ "$packagesFlag" ]; then
+        "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES_ARCH}" --plugin-dir "${BASEDIR}/dotbot-yay"
+    fi
+fi
