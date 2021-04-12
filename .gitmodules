@@ -23,3 +23,6 @@
 [submodule "ohmyzsh-custom/plugins/zsh-completions"]
 	path = ohmyzsh-custom/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule "ohmyzsh-custom/themes/powerlevel10k"]
+	path = ohmyzsh-custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k

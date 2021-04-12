@@ -21,7 +21,7 @@ alias cat='bat'
 # Show OS info when opening a new terminal
 neofetch
 
-# Font mode for powerlevel9k
+# Font mode for powerlevel10k
 P9K_MODE="nerdfont-complete"
 
 # Prompt elements
@@ -31,7 +31,7 @@ P9K_RIGHT_PROMPT_ELEMENTS=(background_jobs go_version virtualenv)
 # Set Oh-My-Zsh location.
 ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Prompt settings
 P9K_PROMPT_ON_NEWLINE=true
