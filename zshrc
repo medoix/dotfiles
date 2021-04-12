@@ -30,6 +30,7 @@ alias cat='bat'
 
 # Set Oh-My-Zsh location.
 ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Set name of the theme to load.
 ZSH_THEME="powerlevel10k/powerlevel10k"
 

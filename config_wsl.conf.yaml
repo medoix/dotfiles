@@ -12,7 +12,7 @@
     ~/.config/ranger: config/ranger
     ~/.gitconfig:
     ~/.oh-my-zsh: ohmyzsh
-    ~/.oh-my-zsh/custom:
+    ~/.oh-my-zsh-custom:
         path: ohmyzsh-custom
         force: true
     ~/.p10k.zsh:
