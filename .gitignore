@@ -4,3 +4,6 @@ system/.custom
 # Allow only the SSH Config
 ssh/*
 ssh/!config
+
+# Ignore Symlinks
+find * -type l
