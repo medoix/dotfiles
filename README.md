@@ -2,24 +2,58 @@
 
 These are my dotfiles. Take anything you want, but at your own risk.
 
-It targets macOS & \*Nix systems.
+It utilises 
+[dotbot](https://github.com/anishathalye/dotbot) to manage dotfile linking and setup commands
+[dotbot-yay](https://github.com/OxSon/dotbot-yay) to install Arch packages via Pacman or YAY
 
-## Package overview
+# Configurations & Packages
+[Arch Standalone Configuration](./config_arch.conf.yaml)
 
-# Core
-- [Homebrew](https://brew.sh) (packages: [Brewfile](./install/Brewfile))
-- [homebrew-cask](https://caskroom.github.io) (packages: [Caskfile](./install/Caskfile))
-- [Node.js + npm LTS](https://nodejs.org/en/download/) (packages: [npmfile](./install/npmfile))
-- Latest Ruby (packages: [Gemfile](./install/Gemfile))
-- Latest Git, Bash 4, Python 3, GNU coreutils, curl
-# \*Nix
-- []()
-# MacOS
-- [Hammerspoon](https://www.hammerspoon.org) (config: [keybindings & window management](./config/hammerspoon))
-- [Mackup](https://github.com/lra/mackup) (sync application settings)
-- `$EDITOR` (and Git editor) is [GNU nano](https://www.nano-editor.org)
+[Arch Standalone Packages](./packages_arch.conf.yaml)
 
-## Install
+[Arch WSL Configuration](./config_wsl.conf.yaml)
+
+[Arch WSL Packages](./packages_wsl.conf.yaml)
+
+# Setup
+## Arch Standlone
+
+
+## Arch WSL
+- Download the latest `Arch.zip` at [Arch WSL](https://github.com/yuk7/ArchWSL/releases/)
+- Extract the content to `C:\Program Files\Arch\`
+- Open a terminal and run `Arch.exe` to complete the setup.
+- Execute `Arch.exe` again and run the following commands to complete user setup.
+
+---
+    echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel
+    useradd -m -G wheel -s /bin/bash {username}
+    passwd {username}
+    exit
+    Arch.exe config --default-user {username}
+    Arch.exe
+    sudo pacman-key --init
+    sudo pacman-key --populate
+    sudo pacman -Syu
+---
+
+- Download [SauceCodePro](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip) font and install the "Windows Compatible" files.
+- In Windows Terminal `settings.json` add `fontFace` and `fontSize` with your font choices.
+
+---
+    {
+        "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+        "hidden": false,
+        "name": "Arch",
+        "source": "Windows.Terminal.Wsl",
+        "fontSize": 11,
+        "fontFace": "SauceCodePro NF"
+    }
+---
+- Set the Arch `guid` to be the default `defaultProfile`
+
+
+
 
 On a sparkling fresh installation of macOS:
 
