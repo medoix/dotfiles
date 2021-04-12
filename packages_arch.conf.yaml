@@ -50,7 +50,6 @@
   - firefox
   - i3-gaps
   - i3blocks
-  - i3lock
   - npm
   - papirus-icon-theme
   - pavucontrol
@@ -66,7 +65,9 @@
   - xorg-xinit
   - xorg-xrandr
 - yay:
+  - betterlockscreen-git
   - gotop
+  - i3lock-color
   - lazydocker-git
   - lazygit-git
   - nerd-fonts-source-code-pro
