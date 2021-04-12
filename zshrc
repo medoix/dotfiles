@@ -34,6 +34,9 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Set name of the theme to load.
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Set i3Blocks Lock Script
+LOCKSCRIPT="betterlockscreen -l dimblur"
+
 # Command auto-correction.
 ENABLE_CORRECTION="true"
 

@@ -46,6 +46,7 @@ function wallpaper_downloader() {
         exit 1
     done
     feh --bg-scale "$WALLPAPER_1" --bg-scale "$WALLPAPER_2"
+    betterlockscreen -u "$WALLPAPER_1" -w dim
 }
 
 wallpaper_existence_validator
