@@ -1,2 +1,6 @@
 config/nvim/plugged
 system/.custom
+
+# Allow only the SSH Config
+ssh/*
+ssh/!config
