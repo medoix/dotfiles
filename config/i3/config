@@ -197,7 +197,7 @@ bar {
 exec_always --no-startup-id ~/.scripts/virtual.sh
 exec_always --no-startup-id ~/.scripts/monitors.sh
 exec_always --no-startup-id ~/.scripts/wallpapers.sh
-exec --no-startup-id pulseaudio --start
+exec --no-startup-id pulseaudio -D
 exec --no-startup-id /usr/bin/xfce4-power-manager
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id notify-send "Welcome back $USER!" -i ~/.images/icons8-dog-100.png
