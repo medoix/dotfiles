@@ -24,6 +24,9 @@ It utilises
 - Enter to confirm config and commence install.
 - Once install has completed, remove install media and `reboot`
 
+### Mobile Extras
+- Install 'wireless_tools'
+
 ## Arch WSL
 - Download the latest `Arch.zip` at [Arch WSL](https://github.com/yuk7/ArchWSL/releases/)
 - Extract the content to `C:\Program Files\Arch\`
