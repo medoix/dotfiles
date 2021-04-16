@@ -19,6 +19,7 @@
   - odt2txt
   - openssh
   - openvpn
+  - pass
   - poppler
   - ranger
   - reflector
@@ -34,5 +35,9 @@
   - xbindkeys
 - yay:
   - gotop
+  # Mail Packages
+  - neomutt
+  - mutt-wizard-git
+  - protonmail-bridge-bin
 - shell:
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring Docker Service and Group]
