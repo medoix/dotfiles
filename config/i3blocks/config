@@ -95,6 +95,11 @@ command=date '+%A  %B %d  %Y'
 interval=60
 label=<span color="#8be9fd"> </span>
 
+[battery]
+command=cat /sys/class/power_supply/BAT0/capacity
+interval=1
+label=<span color="#50fa7b"> </span>
+
 [shutdown_menu]
 full_text=<span color="#50fa7b"> </span>
 command=~/.config/i3blocks/blocks/shutdown_menu/shutdown_menu
