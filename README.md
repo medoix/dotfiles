@@ -46,6 +46,10 @@ It utilises
 ### Mobile Extras
 - Install 'wireless_tools'
 
+### Virtual Extras
+- Install 'virtualbox-guest-utils'
+- Disable screen control and sleep settings in the Power Manager
+
 ## Arch WSL
 - Download the latest `Arch.zip` at [Arch WSL](https://github.com/yuk7/ArchWSL/releases/)
 - Extract the content to `C:\Program Files\Arch\`
