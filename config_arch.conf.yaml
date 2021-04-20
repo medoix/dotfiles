@@ -24,6 +24,7 @@
     ~/.zshrc:
 
 - create:
+    - ~/bin
     - ~/downloads
     - ~/.images
     - ~/projects

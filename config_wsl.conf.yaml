@@ -21,6 +21,7 @@
     ~/.zshrc:
 
 - create:
+    - ~/bin
     - ~/downloads
     - ~/projects
     - ~/.vim/undo-history
