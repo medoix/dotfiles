@@ -130,6 +130,18 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace0
 
+# Move workspace to different monitor
+mode "move_workspace" {
+  bindsym Up move workspace to output up
+  bindsym Down move workspace to output down
+  bindsym Left move workspace to output left
+  bindsym Right move workspace to oputput right
+
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+o mode "move_workspace"
+
 # Always open some programs on specified workspace
 assign [class="firefox"] $workspace1
 assign [class="Alacritty"] $workspace3
