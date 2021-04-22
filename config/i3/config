@@ -169,6 +169,7 @@ bindsym $mod+Shift+r restart
 
 # Lock screen
 bindsym $mod+Shift+x exec betterlockscreen -l dimblur
+bindsym $mod+Shift+x exec multilockscreen -l dimblur
 
 # Resize window (you can also use the mouse for that)
 mode "resize"

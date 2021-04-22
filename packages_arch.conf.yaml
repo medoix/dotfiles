@@ -66,10 +66,11 @@
   - xorg-xinit
   - xorg-xrandr
 - yay:
-  - betterlockscreen-git
   - gotop
   - lazydocker-git
   - lazygit-git
+  # A simple lock script for i3lock-color
+  - multilockscreen-git
   - nerd-fonts-source-code-pro
   - pulseaudio-ctl
   - spotify
