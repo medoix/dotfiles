@@ -41,7 +41,6 @@
   - xterm
   - zsh
   # GUI Packages
-  - adapta-gtk-theme
   - alacritty
   - discount
   - emacs
@@ -66,6 +65,11 @@
   - xorg-xinit
   - xorg-xrandr
 - yay:
+  # Flat Remix is an icon theme inspired by material design. It is mostly flat using a colorful palette with some shadows, highlights, and gradients for some depth.
+  - flat-remix
+
+  # Flat Remix GTK theme is a pretty simple gtk window theme inspired on material design following a modern design using "flat" colors with high contrasts and sharp borders.
+  - flat-remix-gtk
   - gotop
   - lazydocker-git
   - lazygit-git
