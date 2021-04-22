@@ -35,8 +35,9 @@ alias x='ranger'
 alias h='htop'
 alias cat='bat'
 
-# Append Bin to Path
+# Append Custom Bin Paths
 path+=($HOME'/bin')
+path+=($HOME'/go/bin')
 # Set Oh-My-Zsh location.
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
