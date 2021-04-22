@@ -15,8 +15,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Aliases for a few useful commands
-alias mirrorUpdate='sudo reflector --latest 250 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-alias pacmanGhost='~/.scripts/pacman.sh'
+alias pacman-ghost='~/.scripts/pacman.sh'
+# Remove orphaned packages.
+# Arguments to "pacman -Q":
+#    -d restrict output to packages installed as dependencies
+#    -t list packages that are no longer required by any installed package
+#    -q suppress version numbers of packages (this would confuse pacman -R)
+alias pacman-clean='pacman-ghost && sudo pacman -R $(pacman -Qdtq)'
 alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
