@@ -1,2 +1,3 @@
 - pacman:
+  # VirtualBox Guest userspace utilities
   - virtualbox-guest-utils
