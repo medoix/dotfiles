@@ -24,6 +24,9 @@
   - neofetch
   - neovim
   - odt2txt
+  # NetworkManager GUI connection editor and widgets
+  - nm-connection-editor
+
   - openssh
   - openvpn
   - pacman-contrib
@@ -56,6 +59,9 @@
   - sysstat
   - ttf-croscore
   - vlc
+  # Tools allowing to manipulate the Wireless Extensions
+  - wireless_tools
+
   - xbindkeys
   - xfce4-notifyd
   - xfce4-power-manager
@@ -79,4 +85,5 @@
   - pulseaudio-ctl
   - spotify
 - shell:
+  - [sudo systemctl enable NetworkManager.service && sudo systemctl start NetworkManager.service, Enabling & Starting the NetworkManager Service]
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring Docker Service and Group]
