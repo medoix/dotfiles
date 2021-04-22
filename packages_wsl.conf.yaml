@@ -23,6 +23,9 @@
   # The fast distributed version control system
   - git
 
+  # Core compiler tools for the Go programming language
+  - go
+
   # Developer tools for the Go programming language
   - go-tools
 
