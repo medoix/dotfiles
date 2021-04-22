@@ -1,88 +1,180 @@
 - pacman:
-  # Base Packages 
+  # Client for battery, power, and thermal readings
   - acpi
-  - alsa-utils
-  - alsa-firmware
+
+  # A cross-platform, GPU-accelerated terminal emulator
+  - alacritty
+
+  # A script for managing file archives of various types
   - atool
+
+  # Cat clone with syntax highlighting and git integration
   - bat
+
+  # GTK+ Bluetooth Manager
   - blueman
+
+  # Development and debugging utilities for the bluetooth protocol stack
   - bluez-utils
+
+  # An URL retrieval utility and library
   - curl
+
+  # RFC2131 compliant DHCP client daemon
   - dhcpcd
+
+  # Pack, ship and run any application as a lightweight container
   - docker
-  - ffmpegthumbnailer
+
+  # Fast and light imlib2-based image viewer
+  - feh
+
+  # Standalone web browser from mozilla.org
+  - firefox
+
+  # Firewall daemon with D-Bus interface
   - firewalld
+
+  # The fast distributed version control system
   - git
-  - go-pie
+
+  # Developer tools for the Go programming language
   - go-tools
-  - highlight
+
+  # Interactive process viewer
   - htop
+
+  # A fork of i3wm tiling window manager with more features, including gaps
+  - i3-gaps
+
+  # Define blocks for your i3bar status line
+  - i3blocks
+
+  # Command-line JSON processor
   - jq
-  - less
+
+  # Modern ls with a lot of pretty colors and awesome icons
   - lsd
+
+  # Supplies technical and tag information about a video or audio file (CLI interface)
   - mediainfo
+
+  # A CLI system information tool written in BASH that supports displaying images.
   - neofetch
+
+  # A version of mutt with added features
+  - neomutt
+
+  # Fork of Vim aiming to improve user experience, plugins, and GUIs
   - neovim
-  - odt2txt
+
   # NetworkManager GUI connection editor and widgets
   - nm-connection-editor
 
-  - openssh
-  - openvpn
-  - pacman-contrib
-  - playerctl
-  - poppler
-  - pulseaudio
-  - pulseaudio-alsa
-  - pulseaudio-bluetooth
-  - ranger
-  - reflector
-  - tmux
-  - usbguard
-  - weechat
-  - whois
-  - xterm
-  - zsh
-  # GUI Packages
-  - alacritty
-  - discount
-  - emacs
-  - evince
-  - feh
-  - firefox
-  - i3-gaps
-  - i3blocks
+  # A package manager for javascript
   - npm
-  - papirus-icon-theme
+
+  # Premier connectivity tool for remote login with the SSH protocol
+  - openssh
+
+  # An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
+  - openvpn
+
+  # Contributed scripts and tools for pacman systems (we use the 'checkupdates' script for the i3 bar)
+  - pacman-contrib
+
+  # PulseAudio Volume Control
   - pavucontrol
-  - rofi
+
+  # mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+  - playerctl
+
+  # A featureful, general-purpose sound server
+  - pulseaudio
+
+  # Bluetooth support for PulseAudio
+  - pulseaudio-bluetooth
+
+  # Simple, vim-like file manager
+  - ranger
+
+  # A window switcher, application launcher and dmenu replacement
+  - rofi 
+
+  # A collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
   - sysstat
+
+  # A terminal multiplexer
+  - tmux
+
+  # Chrome OS core fonts
   - ttf-croscore
+
+  # Multi-platform MPEG, VCD/DVD, and DivX player
   - vlc
+
+  # Intelligent WHOIS client
+  - whois
+
   # Tools allowing to manipulate the Wireless Extensions
   - wireless_tools
 
+  # Launch shell commands with your keyboard or your mouse under X
   - xbindkeys
+
+  # Notification daemon for the Xfce desktop
   - xfce4-notifyd
+
+  # Power manager for Xfce desktop
   - xfce4-power-manager
-  - xfce4-screenshooter
-  # - xorg- 
+
+  # Xorg X server
   - xorg-server
+
+  # X.Org initialisation program
   - xorg-xinit
+
+  # Primitive command line interface to RandR extension
   - xorg-xrandr
+
+  # X Terminal Emulator
+  - xterm
+
+  # A very advanced and programmable command interpreter (shell) for UNIX
+  - zsh
+
 - yay:
   # Flat Remix is an icon theme inspired by material design. It is mostly flat using a colorful palette with some shadows, highlights, and gradients for some depth.
   - flat-remix
 
   # Flat Remix GTK theme is a pretty simple gtk window theme inspired on material design following a modern design using "flat" colors with high contrasts and sharp borders.
   - flat-remix-gtk
+
+  # A terminal based graphical activity monitor inspired by gtop and vtop
   - gotop
+
+  # A simple terminal UI for docker and docker-compose, written in Go with the gocui library.
   - lazydocker-git
+
+  # A simple terminal UI for git commands
   - lazygit-git
+
   # A simple lock script for i3lock-color
   - multilockscreen-git
+
+  # Simple interface to auto-configure neomutt and isync with safe passwords
+  - mutt-wizard-git
+
+  # Patched font SourceCodePro from nerd-fonts library
   - nerd-fonts-source-code-pro
+
+  # Integrate ProtonMail paid account with any program that supports IMAP and SMTP
+  - protonmail-bridge-bin
+
+  # Control pulseaudio volume from the shell or mapped to keyboard shortcuts.
   - pulseaudio-ctl
+
+  # A proprietary music streaming service
   - spotify
 - shell:
   - [sudo systemctl enable NetworkManager.service && sudo systemctl start NetworkManager.service, Enabling & Starting the NetworkManager Service]
