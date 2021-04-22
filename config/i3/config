@@ -221,4 +221,5 @@ exec --no-startup-id ~/.scripts/wallpaper-static.sh
 exec --no-startup-id /usr/bin/systemctl --user start pulseaudio.service
 exec --no-startup-id /usr/bin/xfce4-power-manager
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
-exec --no-startup-id notify-send "Welcome back $USER!" -i ~/.images/welcome.png
+exec --no-startup-id /usr/bin/discord --start-minimized
+exec --no-startup-id /usr/bin/steam -silent
