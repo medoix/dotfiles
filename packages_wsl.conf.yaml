@@ -1,43 +1,94 @@
 - pacman:
-  # Base Packages 
-  - atool
-  - bat
-  - curl
-  - dhcpcd
-  - docker
-  - ffmpegthumbnailer
-  - git
-  - go-pie
-  - go-tools
-  - highlight
-  - htop
-  - jq
-  - less
-  - lsd
-  - neofetch
-  - neovim
-  - odt2txt
-  - openssh
-  - openvpn
-  - pass
-  - poppler
-  - ranger
-  - reflector
-  - tmux
-  - whois
-  - zsh
-  # GUI Packages
+  # Monospaced font family for user interface and coding environments
   - adobe-source-code-pro-fonts
-  - discount
-  - emacs
-  - evince
-  - npm
-  - xbindkeys
-- yay:
-  - gotop
-  # Mail Packages
+
+  # A script for managing file archives of various types
+  - atool
+
+  # Cat clone with syntax highlighting and git integration
+  - bat
+
+  # An URL retrieval utility and library
+  - curl
+
+  # RFC2131 compliant DHCP client daemon
+  - dhcpcd
+
+  # Pack, ship and run any application as a lightweight container
+  - docker
+
+  # A GUI with OCR capability to produce PDFs or DjVus from scanned documents
+  - gscan2pdf
+
+  # The fast distributed version control system
+  - git
+
+  # Developer tools for the Go programming language
+  - go-tools
+
+  # Interactive process viewer
+  - htop
+
+  # Command-line JSON processor
+  - jq
+
+  # A terminal based program for viewing text files
+  - less
+
+  # Modern ls with a lot of pretty colors and awesome icons
+  - lsd
+
+  # A CLI system information tool written in BASH that supports displaying images.
+  - neofetch
+
+  # A version of mutt with added features
   - neomutt
+
+  # Fork of Vim aiming to improve user experience, plugins, and GUIs
+  - neovim
+
+  # A package manager for javascript
+  - npm
+
+  # Premier connectivity tool for remote login with the SSH protocol
+  - openssh
+
+  # An easy-to-use, robust and highly configurable VPN (Virtual Private Network)
+  - openvpn
+
+  # Stores, retrieves, generates, and synchronizes passwords securely
+  - pass
+
+  # Simple, vim-like file manager
+  - ranger
+
+  # A terminal multiplexer
+  - tmux
+
+  # Intelligent WHOIS client
+  - whois
+
+  # Launch shell commands with your keyboard or your mouse under X
+  - xbindkeys
+
+  # A very advanced and programmable command interpreter (shell) for UNIX
+  - zsh
+
+- yay:
+  # A terminal based graphical activity monitor inspired by gtop and vtop
+  - gotop
+
+  # A simple terminal UI for docker and docker-compose, written in Go with the gocui library.
+  - lazydocker-git
+
+  # A simple terminal UI for git commands
+  - lazygit-git
+
+  # Simple interface to auto-configure neomutt and isync with safe passwords
   - mutt-wizard-git
+
+  # Integrate ProtonMail paid account with any program that supports IMAP and SMT
   - protonmail-bridge-bin
+
 - shell:
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring Docker Service and Group]
