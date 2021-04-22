@@ -2,6 +2,9 @@
   # Client for battery, power, and thermal readings
   - acpi
 
+  # A backward-compatible xbacklight replacement based on ACPI (https://gitlab.com/wavexx/acpilight)
+  - acpilight
+
   # A cross-platform, GPU-accelerated terminal emulator
   - alacritty
 
