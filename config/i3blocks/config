@@ -12,16 +12,6 @@ color=#f8f8f2
 separator_block_width=15
 markup=pango
 
-[battery]
-interval=2
-color=#50fa7b
-
-[wifi]
-command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
-instance=wlp11s0f3u1
-interval=5
-label=<span color="#f1fa8c"> </span>
-
 [mediaplayer]
 command=playerctl metadata --format "{{ artist }} - {{ title }}"
 interval=2
@@ -65,6 +55,12 @@ command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
 interval=2
 label=<span color="#f1fa8c"> </span>
 
+[wifi]
+command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
+instance=wlp11s0f3u1
+interval=5
+label=<span color="#f1fa8c"> </span>
+
 [volume]
 command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'; if [ $button ]; then pavucontrol;  fi
 interval=1
@@ -75,29 +71,31 @@ command=TZ=":Australia/Sydney" date '+%I:%M %Z'
 interval=1
 label=<span color="#555555"> </span>
 
-[time_pst]
-command=TZ=":US/Pacific" date '+%I:%M %Z'
-interval=1
-label=<span color="#ff5555"> </span>
+#[time_pst]
+#command=TZ=":US/Pacific" date '+%I:%M %Z'
+#interval=1
+#label=<span color="#ff5555"> </span>
 
-[time_cst]
-command=TZ=":US/Central" date '+%I:%M %Z'
-interval=1
-label=<span color="#ff79c6"> </span>
+#[time_cst]
+#command=TZ=":US/Central" date '+%I:%M %Z'
+#interval=1
+#label=<span color="#ff79c6"> </span>
 
-[time_est]
-command=TZ=":US/Eastern" date '+%I:%M %Z'
-interval=1
-label=<span color="#bd93f9"> </span>
+#[time_est]
+#command=TZ=":US/Eastern" date '+%I:%M %Z'
+#interval=1
+#label=<span color="#bd93f9"> </span>
 
 [date]
-command=date '+%A  %B %d  %Y'
+#command=date '+%A  %B %d  %Y'
+command=date '+%d-%B-%Y'
 interval=60
 label=<span color="#8be9fd"> </span>
 
 [battery]
 command=cat /sys/class/power_supply/BAT0/capacity
-interval=1
+interval=2
+color=#50fa7b
 label=<span color="#50fa7b"> </span>
 
 [shutdown_menu]
@@ -107,4 +105,4 @@ ROFI_TEXT=Menu:
 ROFI_OPTIONS=-no-config -location 3 -yoffset 29 -width 5 -xoffset 5 -bw 0 -border 0 -theme ~/.config/rofi/menu.rasi
 ENABLE_CONFIRMATIONS=true
 LAUNCHER=rofi
-LOCKSCRIPT=betterlockscreen -l dimblur
+LOCKSCRIPT=multilockscreen -l dimblur
