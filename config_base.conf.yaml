@@ -1,0 +1,24 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.gitconfig:
+    ~/.oh-my-zsh: ohmyzsh
+    ~/.oh-my-zsh-custom:
+        path: ohmyzsh-custom
+        force: true
+    ~/.p10k.zsh:
+    ~/.scripts:
+    ~/.ssh:
+    ~/.zshrc:
+
+- create:
+    - ~/bin
+    - ~/downloads
+    - ~/projects
+    - ~/.vim/undo-history
+

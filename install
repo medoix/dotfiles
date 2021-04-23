@@ -32,12 +32,24 @@ git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 # Initialize all Submodules
 git submodule update --init --recursive
 
+# Base Config and Packages
+CONFIG_BASE="config_base.conf.yaml"
+PACKAGES_BASE="packages_base.conf.yaml"
+echo "BASE: Config"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_BASE}"
+if [ "$packagesFlag" ]; then
+    echo "BASE: Packages"
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES_BASE}" --plugin-dir "${BASEDIR}/dotbot-yay"
+fi
+
 # Windows SubSystem Linux
 CONFIG_WSL="config_wsl.conf.yaml"
 PACKAGES_WSL="packages_wsl.conf.yaml"
 if [[ $(uname -r) =~ microsoft ]]; then
+    echo "WSL: Config"
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_WSL}"
     if [ "$packagesFlag" ]; then
+        echo "WSL: Packages"
         "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES_WSL}" --plugin-dir "${BASEDIR}/dotbot-yay"
     fi
 fi
@@ -46,8 +58,10 @@ fi
 CONFIG_ARCH="config_arch.conf.yaml"
 PACKAGES_ARCH="packages_arch.conf.yaml"
 if [[ $(uname -r) =~ arch ]]; then
+    echo "ARCH: Config"
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG_ARCH}"
     if [ "$packagesFlag" ]; then
+        echo "ARCH: Packages"
         "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES_ARCH}" --plugin-dir "${BASEDIR}/dotbot-yay"
     fi
 fi
@@ -55,7 +69,9 @@ fi
 # Additional Packages for VirtualBox
 PACKAGES_VIRTUALBOX="packages_virtualbox.conf.yaml"
 if grep -q "^flags.*hypervisor" /proc/cpuinfo; then
+    echo "VIRT: Config"
     if [ "$packagesFlag" ]; then
+        echo "VIRT: Packages"
         "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${PACKAGES_ARCH}" --plugin-dir "${BASEDIR}/dotbot-yay"
     fi
 fi

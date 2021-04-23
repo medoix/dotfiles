@@ -10,18 +10,3 @@
     ~/.config/neofetch: config/neofetch
     ~/.config/nvim: config/nvim
     ~/.config/ranger: config/ranger
-    ~/.gitconfig:
-    ~/.oh-my-zsh: ohmyzsh
-    ~/.oh-my-zsh-custom:
-        path: ohmyzsh-custom
-        force: true
-    ~/.p10k.zsh:
-    ~/.scripts:
-    ~/.ssh:
-    ~/.zshrc:
-
-- create:
-    - ~/bin
-    - ~/downloads
-    - ~/projects
-    - ~/.vim/undo-history
