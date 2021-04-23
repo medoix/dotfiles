@@ -185,3 +185,6 @@
 - shell:
   - [sudo systemctl enable NetworkManager.service && sudo systemctl start NetworkManager.service, Enabling & Starting the NetworkManager Service]
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring Docker Service and Group]
+
+  # GO Programs
+  - [go get -u -v github.com/gennaro-tedesco/element]
