@@ -35,9 +35,6 @@
   # A version of mutt with added features
   - neomutt
 
-  # Fork of Vim aiming to improve user experience, plugins, and GUIs
-  - neovim
-
   # A package manager for javascript
   - npm
 
@@ -77,6 +74,9 @@
 
   # Patched font SourceCodePro from nerd-fonts library
   - nerd-fonts-source-code-pro
+
+  # Fork of Vim aiming to improve user experience, plugins, and GUIs
+  - neovim-git
 
   # Integrate ProtonMail paid account with any program that supports IMAP and SMTP
   - protonmail-bridge-bin
