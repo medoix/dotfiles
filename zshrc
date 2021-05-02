@@ -34,6 +34,8 @@ alias rm='rm -i'
 alias x='ranger'
 alias h='htop'
 alias cat='bat'
+alias nano='nvim'
+alias vim='nvim'
 
 # Append Custom Bin Paths
 path+=($HOME'/bin')
