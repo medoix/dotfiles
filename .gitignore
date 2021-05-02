@@ -1,9 +1,12 @@
-config/nvim/plugged
 system/.custom
 
 # Allow only the SSH Config
 ssh/*
 ssh/!config
+
+# Neovim files
+config/nvim/plugged
+config/nvim/undodir
 
 # Ignore Symlinks
 find * -type l
