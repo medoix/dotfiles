@@ -109,9 +109,6 @@ dynamic_title: true
 
 live_config_reload: true
 
-shell:
-  program: /bin/zsh
-
 key_bindings:
   - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
   - { key: Y,        mods: Control, action: Paste                        }
