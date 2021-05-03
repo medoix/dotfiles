@@ -83,6 +83,7 @@
 
 - shell:
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring Docker Service and Group]
+  - [sudo chsh -s /bin/zsh $USER ]
 
   # GO Programs
   - [go get -u -v github.com/gennaro-tedesco/element]
