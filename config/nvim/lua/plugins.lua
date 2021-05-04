@@ -26,7 +26,10 @@ return require('packer').startup(function()
     use 'nvim-telescope/telescope-media-files.nvim'
 
     -- Formatting --
+    use '9mm/vim-closer'
     use 'norcalli/nvim-colorizer.lua'
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-surround'
 
     -- Language Support --
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
