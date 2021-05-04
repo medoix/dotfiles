@@ -1,0 +1,7 @@
+local floaterm_mappings = {
+  {'n', '<leader>ld', '<cmd>FloatermNew lazydocker<cr>'},
+  {'n', '<leader>lg', '<cmd>FloatermNew --wintype=floating lazygit<cr>'},
+  {'n', '<leader>rr', '<cmd>FloatermNew --wintype=floating ranger<cr>'},
+  {'n', '<leader>tt', '<cmd>FloatermNew --wintype=floating<cr>'},
+}
+require'ezmap'.map(floaterm_mappings, {'noremap', 'silent'})
