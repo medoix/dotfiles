@@ -32,6 +32,7 @@ return require('packer').startup(function()
     use 'tpope/vim-surround'
 
     -- Language Support --
+    use 'neovim/nvim-lspconfig'
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-treesitter/playground'
