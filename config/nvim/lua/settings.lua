@@ -16,7 +16,6 @@ function M.options()
     o.backup = false
     o.clipboard = 'unnamedplus'
     o.cmdheight = 1
-    o.completeopt = 'menuone,noselect'
     o.errorbells = false
     o.history = 1000
     o.hidden = true
