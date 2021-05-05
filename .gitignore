@@ -4,5 +4,8 @@ system/.custom
 ssh/*
 ssh/!config
 
+# Neovim
+config/nvim/plugin/
+
 # Ignore Symlinks
 find * -type l
