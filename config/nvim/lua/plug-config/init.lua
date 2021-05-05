@@ -1,6 +1,7 @@
 require 'plug-config.bufferline'
 require 'plug-config.colorizer'
 --require 'plug-config.compe'
+--require 'plug-config.compe_tabnine'
 require 'plug-config.floaterm'
 require 'plug-config.gitsigns'
 require 'plug-config.hardtime'
