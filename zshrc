@@ -15,7 +15,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Aliases for a few useful commands
-alias dots='cd ~/.dotfiles && git pull'
+alias dots='git -C ~/.dotfiles pull'
 alias pacman-ghost='~/.scripts/pacman.sh'
 # Remove orphaned packages.
 # Arguments to "pacman -Q":
