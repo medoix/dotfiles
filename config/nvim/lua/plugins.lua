@@ -33,11 +33,12 @@ return require('packer').startup(function()
 
     -- Language Support --
     use 'neovim/nvim-lspconfig'
-    --use {'hrsh7th/nvim-compe', requires = { 'neovim/nvim-lspconfig' }}
+    use {'hrsh7th/nvim-compe', requires = { 'neovim/nvim-lspconfig' }}
+    use {'hrsh7th/vim-vsnip', requires = { 'hrsh7th/nvim-compe' }}
     -- TabNine currently broken on install with Packer
     --use {'tzachar/compe-tabnine', requires = 'hrsh7th/nvim-compe', run='./install.sh'}
+    use {'nvim-treesitter/nvim-treesitter', requires = { 'neovim/nvim-lspconfig' }, run = ":TSUpdate"}
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-treesitter/playground'
  
     -- Themes --
