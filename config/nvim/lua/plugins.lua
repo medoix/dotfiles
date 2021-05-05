@@ -33,6 +33,7 @@ return require('packer').startup(function()
 
     -- Language Support --
     use 'neovim/nvim-lspconfig'
+    --use {'hrsh7th/nvim-compe', requires = { 'neovim/nvim-lspconfig' }}
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-treesitter/playground'
