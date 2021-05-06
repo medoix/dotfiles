@@ -38,11 +38,18 @@ return require('packer').startup(function()
     -- TabNine currently broken on install with Packer
     --use {'tzachar/compe-tabnine', requires = 'hrsh7th/nvim-compe', run='./install.sh'}
     use {'nvim-treesitter/nvim-treesitter', requires = { 'neovim/nvim-lspconfig' }, run = ":TSUpdate"}
-    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
     use 'nvim-treesitter/playground'
  
     -- Themes --
     use 'folke/tokyonight.nvim'
+
+
+    -- Git Support --
+    --
+    --Shows histroy of commits
+    use 'rhysd/git-messenger.vim'
+    -- Signs for added, removed, and changed lines as well as Git blame info
+    use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
 
     -- Utilities --
     use 'tweekmonster/startuptime.vim'
