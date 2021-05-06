@@ -123,3 +123,24 @@ It utilises
 - `git clone https://gitlab.com/medoix/dotfiles.git ~/.dotfiles`
 * `dotfiles dock` (set [Dock items](./macos/dock.sh))
 * `dotfiles macos` (set [macOS defaults](./macos/defaults.sh))
+
+dotfiles
+    ~/.config/nvim
+    ~/.config/alacritty
+
+brew:
+    brew tap homebrew/cask-fonts
+    font-sauce-code-pro-nerd-font
+    font-hack-nerd-font
+    nodejs
+    ranger
+
+neofetch
+zsh
+alacritty
+lazygit
+lazydocker
+neovim
+
+fullscreen:
+command + control + F
