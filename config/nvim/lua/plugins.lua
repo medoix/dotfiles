@@ -49,7 +49,6 @@ return require('packer').startup(function()
     use 'phaazon/hop.nvim'
     use 'tiagovla/ezmap.nvim'
     use {'akinsho/nvim-bufferline.lua', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
-    use {'kyazdani42/nvim-tree.lua', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
     use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
     use 'voldikss/vim-floaterm'
     use 'takac/vim-hardtime' -- see http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
