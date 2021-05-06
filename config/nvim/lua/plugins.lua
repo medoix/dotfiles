@@ -52,12 +52,23 @@ return require('packer').startup(function()
     use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
 
     -- Utilities --
+    --
+    -- Markdown Previewer
+    use {'medoix/glow.nvim', run = ':GlowInstall'}
+    -- Startup Performance Tester
     use 'tweekmonster/startuptime.vim'
+    -- Hop to Words
     use 'phaazon/hop.nvim'
+    -- Keyboard Mappings
     use 'tiagovla/ezmap.nvim'
+    -- Top bar with tabs in VIM
     use {'akinsho/nvim-bufferline.lua', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+    -- Nicer bottom bar in VIM
     use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+    -- Floating Windows
     use 'voldikss/vim-floaterm'
+    -- Enforces VIM behaviours
     use 'takac/vim-hardtime' -- see http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
-
+    -- Weather Report for IP or <city param>
+    use 'medoix/weather.nvim'
 end)
