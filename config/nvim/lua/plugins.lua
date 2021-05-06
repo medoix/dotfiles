@@ -41,6 +41,8 @@ return require('packer').startup(function()
     use 'nvim-treesitter/playground'
  
     -- Themes --
+    --
+    -- Tokynight Theme (night/dark)
     use 'folke/tokyonight.nvim'
 
 
