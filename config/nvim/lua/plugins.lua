@@ -18,7 +18,7 @@ return require('packer').startup(function()
     -- Packer --
     use {'wbthomason/packer.nvim', opt = true}
 
-    -- Telescope --
+    -- Telescope File Explorer --
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
