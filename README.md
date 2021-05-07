@@ -134,6 +134,7 @@ brew:
     font-hack-nerd-font
     nodejs
     ranger
+    bat
 
 neofetch
 zsh
