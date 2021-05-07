@@ -135,6 +135,7 @@ brew:
     nodejs
     ranger
     bat
+    ripgrep
 
 neofetch
 zsh
