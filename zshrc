@@ -32,6 +32,7 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias ip='ip -c'
 alias rm='rm -i'
+alias tldr="tldr --list | fzf --preview 'tldr {} --color always' | xargs tldr"
 alias x='ranger'
 alias h='htop'
 alias cat='bat'

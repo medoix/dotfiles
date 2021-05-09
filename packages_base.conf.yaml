@@ -81,9 +81,13 @@
   # Integrate ProtonMail paid account with any program that supports IMAP and SMTP
   - protonmail-bridge-bin
 
+  # A fast tldr client in Rust to fetch man pages
+  - tealdeer-git
+
 - shell:
-  - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring Docker Service and Group]
-  - [sudo chsh -s /bin/zsh $USER ]
+  - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring docker service and group]
+  - [sudo chsh -s /bin/zsh $USER, Setting zsh to be default shell]
+  - [tldr -u, Updating tldr local cache]
 
   # GO Programs
   - [go get -u -v github.com/gennaro-tedesco/element]
