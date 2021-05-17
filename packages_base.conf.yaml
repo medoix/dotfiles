@@ -78,6 +78,9 @@
   # Fork of Vim aiming to improve user experience, plugins, and GUIs
   - neovim-git
 
+  # Unlock GnuPG keys on login
+  - pam_gnupg
+
   # Integrate ProtonMail paid account with any program that supports IMAP and SMTP
   - protonmail-bridge-bin
 

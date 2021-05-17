@@ -4,6 +4,11 @@ system/.custom
 ssh/*
 ssh/!config
 
+# Allow only GnuPG Config
+gnupg/*
+!gnupg/gpg-agent.conf
+!gnupg/dirmngr.conf
+
 # Neovim
 config/nvim/plugin/
 

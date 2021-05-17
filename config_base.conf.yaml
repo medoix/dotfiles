@@ -6,7 +6,9 @@
 - clean: ['~']
 
 - link:
+    ~/.config/pam-gnupg: config/pam-gnupg
     ~/.gitconfig:
+    ~/.gnupg:
     ~/.oh-my-zsh: ohmyzsh
     ~/.oh-my-zsh-custom:
         path: ohmyzsh-custom
