@@ -216,3 +216,4 @@ exec --no-startup-id /usr/bin/xfce4-power-manager
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id /usr/bin/discord --start-minimized
 exec --no-startup-id /usr/bin/steam -silent
+exec --no-startup-id python3 /opt/thefanclub/overgrive/overgrive
