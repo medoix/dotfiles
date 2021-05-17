@@ -53,8 +53,14 @@
   # A window switcher, application launcher and dmenu replacement
   - rofi 
 
+  # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
+  - smartmontools
+
   # A collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
   - sysstat
+
+  # Linux Advanced Power Management (Laptop Power)
+  - tlp
 
   # Chrome OS core fonts
   - ttf-croscore
@@ -102,5 +108,9 @@
   # A proprietary music streaming service
   - spotify
 
+  # A GTK user interface for TLP written in Python (Laptop Power)
+  - tlpui-git
+
 - shell:
   - [sudo systemctl enable NetworkManager.service && sudo systemctl start NetworkManager.service, Enabling & Starting the NetworkManager Service]
+  - [sudo systemctl mask systemd-rfkill.socket && sudo systemctl mask systemd-rfkill.service, Mask TLP Socket and Service]
