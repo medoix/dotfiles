@@ -2,7 +2,7 @@ system/.custom
 
 # Allow only the SSH Config
 ssh/*
-ssh/!config
+!ssh/config
 
 # Allow only GnuPG Config
 gnupg/*
