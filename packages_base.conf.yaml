@@ -47,6 +47,9 @@
   # Contributed scripts and tools for pacman systems (we use the 'checkupdates' script for the i3 bar)
   - pacman-contrib
 
+  # Stores, retrieves, generates, and synchronizes passwords securely
+  - pass
+
   # Simple, vim-like file manager
   - ranger
 
