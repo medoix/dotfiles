@@ -39,6 +39,9 @@ alias cat='bat'
 alias nano='nvim'
 alias vim='nvim'
 
+# Set Default Editor
+export EDITOR=nvim
+
 # Append Custom Bin Paths
 path+=($HOME'/bin')
 path+=($HOME'/go/bin')
