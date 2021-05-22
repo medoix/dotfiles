@@ -38,8 +38,8 @@ function busy() {
 # mitmproxy Docker
 alias proxy="docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-host 0.0.0.0"
 # Kali Docker
-alias kali-update="docker pull registry.gitlab.com/medoix/kali-linux-docker:latest"
-alias kali="docker run --rm -it -v $HOME/cloud/security:/root/security registry.gitlab.com/medoix/kali-linux-docker:latest /bin/bash"
+alias kali-update="docker login docker.pkg.github.com --username medoix --password $(pass github-packages) && docker pull docker.pkg.github.com/medoix/kali-docker/kali-docker:latest"
+alias kali="docker run --rm -it -v $HOME/cloud/security:/root/security docker.pkg.github.com/medoix/kali-docker/kali-docker:latest /bin/bash"
 # ZAP Proxy
 alias zap-base="docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t ${1} -g gen.conf -r -zap-base.html"
 alias zap-full="docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-full-scan.py -t ${1} -r zap-full.html"
