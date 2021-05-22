@@ -8,6 +8,7 @@
 - link:
     ~/.aliases: aliases
     ~/.config/pam-gnupg: config/pam-gnupg
+    ~/.docker: docker
     ~/.gitconfig:
     ~/.gnupg:
     ~/.oh-my-zsh: ohmyzsh

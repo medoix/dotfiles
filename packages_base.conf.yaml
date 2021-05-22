@@ -63,6 +63,9 @@
   - zsh
 
 - yay:
+  # Store docker credentials using the Standard Unix Password Manager (pass)
+  - docker-credential-pass-git
+
   # A terminal based graphical activity monitor inspired by gtop and vtop
   - gotop
 
