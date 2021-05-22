@@ -92,6 +92,7 @@
 
 - shell:
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring docker service and group]
+  - [sudo usermod -aG video $USER, Adding user to video group to enable screen birghtness control]
   - [sudo chsh -s /bin/zsh $USER, Setting zsh to be default shell]
   - [tldr -u, Updating tldr local cache]
 
