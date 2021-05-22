@@ -30,6 +30,24 @@ It utilises
 
 [Arch Virtual Packages](./packages_virtualbox.conf.yaml)
 
+# Post Setup
+- [Configure pam-gnupg in /etc/pam.d/system-local-login](https://github.com/cruegge/pam-gnupg#setup-guide)
+- Add the following to auto unlock on login
+    ```
+    sudoedit /etc/pam.d/system-local-login
+
+    # Unlock GPG Key
+    auth     optional  pam_gnupg.so store-only
+    session  optional  pam_gnupg.so
+    ```
+- Add the following to auto unlock from lock screen
+    ```
+    sudoedit /etc/pam.d/i3lock
+
+    # Unlock PGP Key
+    auth     optional  pam_gnupg.so
+    ```
+
 # Setup
 ## Arch Standlone
 - Download Arch ISO and create bootable USB.
