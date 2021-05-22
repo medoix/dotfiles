@@ -14,30 +14,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Aliases for a few useful commands
-alias dots='git -C ~/.dotfiles pull'
-alias pacman-ghost='~/.scripts/pacman.sh'
-# Remove orphaned packages.
-# Arguments to "pacman -Q":
-#    -d restrict output to packages installed as dependencies
-#    -t list packages that are no longer required by any installed package
-#    -q suppress version numbers of packages (this would confuse pacman -R)
-alias pacman-clean='pacman-ghost && sudo pacman -R $(pacman -Qdtq)'
-alias ls='lsd'
-alias l='ls -l'
-alias la='ls -a'
-alias lg='lazygit'
-alias ld='lazydocker'
-alias lla='ls -la'
-alias lt='ls --tree'
-alias ip='ip -c'
-alias rm='rm -i'
-alias tldr="tldr --list | fzf --preview 'tldr {} --color always' | xargs tldr"
-alias x='ranger'
-alias h='htop'
-alias cat='bat'
-alias nano='nvim'
-alias vim='nvim'
+# Alias / Commands
+[ -f .aliases ] && source .aliases
+[ -f .aliases ] && source .aliases-work
 
 # Set Default Editor
 export EDITOR=nvim

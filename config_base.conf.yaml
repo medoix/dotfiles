@@ -6,6 +6,7 @@
 - clean: ['~']
 
 - link:
+    ~/.aliases: aliases
     ~/.config/pam-gnupg: config/pam-gnupg
     ~/.gitconfig:
     ~/.gnupg:

@@ -1,0 +1,46 @@
+# Aliases for a few useful commands
+alias dots='git -C ~/.dotfiles pull'
+alias pacman-ghost='~/.scripts/pacman.sh'
+# Remove orphaned packages.
+# Arguments to "pacman -Q":
+#    -d restrict output to packages installed as dependencies
+#    -t list packages that are no longer required by any installed package
+#    -q suppress version numbers of packages (this would confuse pacman -R)
+alias cat='bat'
+alias h='htop'
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias ld='lazydocker'
+alias lg='lazygit'
+alias lla='ls -la'
+alias lt='ls --tree'
+alias myip="curl http://ipecho.net/plain; echo"
+alias nano='nvim'
+alias npm-list="npm list -g --depth 0"
+alias pacman-clean='pacman-ghost && sudo pacman -R $(pacman -Qdtq)'
+alias rm='rm -i'
+alias tldr="tldr --list | fzf --preview 'tldr {} --color always' | xargs tldr"
+alias vim='nvim'
+alias x='ranger'
+
+## DOCKER OTHER ##
+function busy() {
+    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    then
+        docker run -it --rm svenstaro/genact -m "$1"
+    else
+        docker run -it --rm svenstaro/genact -h
+    fi
+}
+
+## SECURITY TOOLS ##
+# mitmproxy Docker
+alias proxy="docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-host 0.0.0.0"
+# Kali Docker
+alias kali-update="docker pull registry.gitlab.com/medoix/kali-linux-docker:latest"
+alias kali="docker run --rm -it -v $HOME/cloud/security:/root/security registry.gitlab.com/medoix/kali-linux-docker:latest /bin/bash"
+# ZAP Proxy
+alias zap-base="docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-baseline.py -t ${1} -g gen.conf -r -zap-base.html"
+alias zap-full="docker run --rm -v $(pwd):/zap/wrk/:rw -t owasp/zap2docker-stable zap-full-scan.py -t ${1} -r zap-full.html"
+
