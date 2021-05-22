@@ -4,14 +4,9 @@ Host gitlab.com
     IdentityFile ~/.ssh/gitlab
     IdentitiesOnly yes
 
-Host github.com-personal
+Host github.com
     HostName github.com
     UpdateHostKeys no
-    IdentityFile ~/.ssh/github-personal
+    IdentityFile ~/.ssh/github
     IdentitiesOnly yes
 
-Host github.com-work
-    HostName github.com
-    UpdateHostKeys no
-    IdentityFile ~/.ssh/github-work
-    IdentitiesOnly yes
