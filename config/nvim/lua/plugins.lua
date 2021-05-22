@@ -72,5 +72,5 @@ return require('packer').startup(function()
     -- Enforces VIM behaviours
     use 'takac/vim-hardtime' -- see http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
     -- Weather Report for IP or <city param>
-    use 'medoix/weather.nvim'
+    use 'npxbr/weather.nvim'
 end)
