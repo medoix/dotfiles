@@ -1,0 +1,6 @@
+{
+	"auths": {
+		"docker.pkg.github.com": {}
+	},
+	"credsStore": "pass"
+}
