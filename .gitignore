@@ -1,16 +1,19 @@
 system/.custom
 
-# Allow only the SSH Config
-ssh/*
-!ssh/config
-
-# Allow only GnuPG Config
+# GnuPG Config
 gnupg/*
 !gnupg/gpg-agent.conf
 !gnupg/dirmngr.conf
 
+# Lock Script
+config/i3/lock-log
+
 # Neovim
 config/nvim/plugin/
+
+# SSH Config
+ssh/*
+!ssh/config
 
 # Ignore Symlinks
 find * -type l
