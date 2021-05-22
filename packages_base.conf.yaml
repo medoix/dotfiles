@@ -53,6 +53,9 @@
   # Simple, vim-like file manager
   - ranger
 
+  # A search tool that combines the usability of ag with the raw speed of grep
+  - ripgrep
+
   # A terminal multiplexer
   - tmux
 
