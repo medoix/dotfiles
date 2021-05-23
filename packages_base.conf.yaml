@@ -88,7 +88,7 @@
   - neovim-git
 
   # Unlock GnuPG keys on login
-  - pam_gnupg
+  - pam-gnupg-git
 
   # Integrate ProtonMail paid account with any program that supports IMAP and SMTP
   - protonmail-bridge-bin
