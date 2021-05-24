@@ -1,15 +1,16 @@
 [user]
-name = medoix
-email = medoix@shivv.com
+    name = medoix
+    email = medoix@shivv.com
 
-[github]
-	user = medoix
-
-[gitlab]
-	user = medoix
-        
 [push]
-        default = simple
+    default = simple
 
 [url "git@gitlab.com:"]
-insteadOf = https://gitlab.com/
+    insteadOf = https://gitlab.com/
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+[includeIf "gitdir:~/projects/work/"]
+    path = ~/.gitconfig-work
+
