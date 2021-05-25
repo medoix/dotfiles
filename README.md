@@ -31,6 +31,25 @@ It utilises
 [Arch Virtual Packages](./packages_virtualbox.conf.yaml)
 
 # Post Setup
+## Plymouth
+### plymouth hook
+Add Intel driver to MODULES and plymouth plymouth-encrypt after `udev` in HOOKS
+```
+sudoedit /etc/mkinitcpio.conf
+
+MODULES=(i915 ...)
+HOOKS=(base udev plymouth plymouth-encrypt ...)
+```
+
+### kernel commands
+Append `quiet splash vt.global_cursor_default=0` to the file in /boot/loader/entries/<generated file>.conf after `rw`
+```
+sudoedit /boot/loader/entries/<generated file>.conf
+
+root=/dev/mapper/luksdev rw quiet splash vt.global_cursor_default=0
+```
+
+## PAM GnuPG
 - [Configure pam-gnupg in /etc/pam.d/system-local-login](https://github.com/cruegge/pam-gnupg#setup-guide)
 - Add the following to auto unlock on login
     ```

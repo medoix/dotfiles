@@ -102,6 +102,12 @@
   # A simple lock script for i3lock-color
   - multilockscreen-git
 
+  # A graphical boot splash screen with kernel mode-setting support (Development version)
+  - plymouth-git
+
+  # The plymouth theme collection by adi1090x
+  - plymouth-theme-lone-git
+
   # Control pulseaudio volume from the shell or mapped to keyboard shortcuts.
   - pulseaudio-ctl
 
