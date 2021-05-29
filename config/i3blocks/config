@@ -105,4 +105,4 @@ ROFI_TEXT=Menu:
 ROFI_OPTIONS=-no-config -location 3 -yoffset 29 -width 5 -xoffset 5 -bw 0 -border 0 -theme ~/.config/rofi/menu.rasi
 ENABLE_CONFIRMATIONS=true
 LAUNCHER=rofi
-LOCKSCRIPT=multilockscreen -l dimblur
+LOCKSCRIPT=$HOME/.scripts/lock.sh

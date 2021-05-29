@@ -27,7 +27,7 @@
 #######################################################################
 
 # Use a custom lock script
-#LOCKSCRIPT="i3lock-extra -m pixelize"
+LOCKSCRIPT=$HOME/.scripts/lock.sh
 
 # Colors: FG (foreground), BG (background), HL (highlighted)
 FG_COLOR="${FG_COLOR:-#bbbbbb}"
