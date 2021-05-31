@@ -117,6 +117,9 @@
   # A GTK user interface for TLP written in Python (Laptop Power)
   - tlpui-git
 
+  # A simple PolicyKit authentication agent for XFCE
+  - xfce-polkit-git
+
 - shell:
   - [sudo systemctl enable NetworkManager.service && sudo systemctl start NetworkManager.service, Enabling & Starting the NetworkManager Service]
   - [sudo systemctl mask systemd-rfkill.socket && sudo systemctl mask systemd-rfkill.service, Mask TLP Socket and Service]
