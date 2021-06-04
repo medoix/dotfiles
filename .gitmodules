@@ -23,3 +23,6 @@
 [submodule "ohmyzsh-custom/themes/powerlevel10k"]
 	path = ohmyzsh-custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k
+[submodule "ohmyzsh-custom/plugins/zsh-z"]
+	path = ohmyzsh-custom/plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z

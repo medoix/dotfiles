@@ -59,6 +59,7 @@ plugins=(
     zsh-completions
     zsh-history-substring-search
     zsh-syntax-highlighting
+    zsh-z
 )
 
 setopt HIST_IGNORE_SPACE
