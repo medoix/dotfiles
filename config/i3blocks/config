@@ -57,7 +57,7 @@ label=<span color="#f1fa8c"> </span>
 
 [wifi]
 command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
-instance=wlp11s0f3u1
+instance=wlp2s0
 interval=5
 label=<span color="#f1fa8c"> </span>
 
