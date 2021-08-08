@@ -26,6 +26,9 @@
   # Firewall daemon with D-Bus interface
   - firewalld
 
+  # Core compiler tools for the Go programming language
+  - go
+
   # A fork of i3wm tiling window manager with more features, including gaps
   - i3-gaps
 
@@ -34,6 +37,9 @@
 
   # Supplies technical and tag information about a video or audio file (CLI interface)
   - mediainfo
+
+  # Network connection manager and user applications
+  - networkmanager
 
   # NetworkManager GUI connection editor and widgets
   - nm-connection-editor
@@ -53,6 +59,9 @@
   # A window switcher, application launcher and dmenu replacement
   - rofi 
 
+  # Systems programming language focused on safety, speed and concurrency
+  - rust
+
   # Control and monitor S.M.A.R.T. enabled ATA and SCSI Hard Drives
   - smartmontools
 
@@ -67,6 +76,9 @@
 
   # Multi-platform MPEG, VCD/DVD, and DivX player
   - vlc
+
+  # Network utility to retrieve files from the Web
+  - wget
 
   # Tools allowing to manipulate the Wireless Extensions
   - wireless_tools
