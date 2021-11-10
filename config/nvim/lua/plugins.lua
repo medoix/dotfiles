@@ -1,22 +1,18 @@
 --
 -- Packer Installer
 --
-local execute = vim.api.nvim_command
 local fn = vim.fn
-
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path})
-  execute 'packadd packer.nvim'
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 --
 -- Packer Setup
 --
-return require('packer').startup(function()
+return require('packer').startup(function(use)
     -- Packer --
-    use {'wbthomason/packer.nvim', opt = true}
+    --use {'wbthomason/packer.nvim', opt = true}
 
     -- Telescope File Explorer --
     use {
@@ -45,7 +41,6 @@ return require('packer').startup(function()
     -- Tokynight Theme (night/dark)
     use 'folke/tokyonight.nvim'
 
-
     -- Git Support --
     --
     --Shows histroy of commits
@@ -73,4 +68,10 @@ return require('packer').startup(function()
     use 'takac/vim-hardtime' -- see http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/
     -- Weather Report for IP or <city param>
     use 'npxbr/weather.nvim'
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+      require('packer').sync()
+    end
 end)
