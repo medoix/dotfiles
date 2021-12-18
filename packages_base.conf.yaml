@@ -87,6 +87,9 @@
   # Fork of Vim aiming to improve user experience, plugins, and GUIs
   - neovim-git
 
+  # A use-package inspired plugin manager for Neovim.
+  - nvim-packer-git
+
   # Unlock GnuPG keys on login
   - pam-gnupg-git
 
