@@ -6,5 +6,6 @@ configuration {
 	show-icons: true;
 	sidebar-mode: true;
 	m: "-4";
-	theme: "medoix";
 }
+
+@theme "medoix"
