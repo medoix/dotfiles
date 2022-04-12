@@ -56,6 +56,9 @@
   # A search tool that combines the usability of ag with the raw speed of grep
   - ripgrep
 
+  # A fast tldr client in Rust to fetch man pages
+  - tldr
+
   # A terminal multiplexer
   - tmux
 
@@ -96,9 +99,6 @@
   # Integrate ProtonMail paid account with any program that supports IMAP and SMTP
   - protonmail-bridge-bin
 
-  # A fast tldr client in Rust to fetch man pages
-  - tealdeer-git
-
 - shell:
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring docker service and group]
   - [sudo usermod -aG video $USER, Adding user to video group to enable screen birghtness control]
@@ -106,4 +106,4 @@
   - [tldr -u, Updating tldr local cache]
 
   # GO Programs
-  - [go get -u -v github.com/gennaro-tedesco/element]
+  - [go install github.com/gennaro-tedesco/element@latest]
