@@ -115,7 +115,7 @@
   - flat-remix-gtk
 
   # A simple lock script for i3lock-color
-  - multilockscreen-git
+  - betterlockscreen-git
 
   # A graphical boot splash screen with kernel mode-setting support (Development version)
   - plymouth-git
