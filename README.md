@@ -91,12 +91,13 @@ root=/dev/mapper/luksdev rw quiet splash vt.global_cursor_default=0
 - Start wpa_supplicant `wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wifi.conf`
 - Start DHCPD to obtain an address `dhcpcd wlan0`
 - Run `archinstall` and answer the questions accordingly.
-- Follow steps and install `dhcpcd git python3 wpa_supplicant` for additional packages.
+- Follow steps and install `dhcpcd git python vim wpa_supplicant` for additional packages.
 - Follow more steps.
 - Enter to confirm config and commence install.
 - Once install has completed, remove install media and `reboot`
 - Set Wifi again as per steps above.
 - Clone dotfiles `git clone https://github.com/medoix/dotfiles .dotfiles`
+- Move into `.dotfiles` directory `cd .dotfiles`
 - Configure and Install `./install -p`
 
 ## Arch VirtualBox
