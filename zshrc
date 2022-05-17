@@ -24,6 +24,7 @@ export EDITOR=nvim
 # Append Custom Bin Paths
 path+=($HOME'/bin')
 path+=($HOME'/go/bin')
+path+=($HOME'/.local/bin')
 # Set Oh-My-Zsh location.
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
