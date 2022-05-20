@@ -162,6 +162,11 @@ for_window [class="^Blueman-manager$"] floating enable
 for_window [class="^Nm-connection-editor$"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 for_window [class="^Steam$" title="*"] floating enable
+for_window [title="Zoom Meeting"] floating enable
+
+# Set specific workspaces
+assign [title="Zoom - Licensed Account"] $workspace6
+assign [title="Zoom Meeting"] $workspace6
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
