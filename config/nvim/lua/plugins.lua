@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope-media-files.nvim'
 
     -- Formatting --
-    use '9mm/vim-closer'
+    use 'rstacruz/vim-closer'
     use 'norcalli/nvim-colorizer.lua'
     use 'tpope/vim-commentary'
     use 'tpope/vim-surround'
@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
     -- Keyboard Mappings
     use 'tiagovla/ezmap.nvim'
     -- Top bar with tabs in VIM
-    use {'akinsho/nvim-bufferline.lua', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
     -- Nicer bottom bar in VIM
     use {'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
     -- Floating Windows
