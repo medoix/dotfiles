@@ -14,7 +14,7 @@ log () {
 
 lock () {
   if [ ! -f "${NOLOCK}" ]; then
-    multilockscreen -l dimblur
+    betterlockscreen -l dimblur
   else
     log "${NOLOCK} found, not locking"
   fi
