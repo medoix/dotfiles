@@ -12,7 +12,7 @@ function wallpaper_downloader() {
     # Use feh to set WALLPAPER as background before multilockscreen applies affects to it
     feh --bg-scale "$WALLPAPER"
     # Multilockscreen uses the .config/multilock/config settings on WALLPAPER
-    multilockscreen -u "$WALLPAPER"
+    betterlockscreen -u "$WALLPAPER"
 }
 
 wallpaper_downloader
