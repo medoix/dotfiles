@@ -8,6 +8,9 @@
   # A cross-platform, GPU-accelerated terminal emulator
   - alacritty
 
+  # Auto-detect connected display hardware and load appropiate X11 setup using xrandr
+  - autorandr
+
   # GTK+ Bluetooth Manager
   - blueman
 
