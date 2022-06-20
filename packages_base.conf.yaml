@@ -32,9 +32,6 @@
   # A CLI system information tool written in BASH that supports displaying images.
   - neofetch
 
-  # A version of mutt with added features
-  - neomutt
-
   # A package manager for javascript
   - npm
 
@@ -81,9 +78,6 @@
   # A simple terminal UI for git commands
   - lazygit-git
 
-  # Simple interface to auto-configure neomutt and isync with safe passwords
-  - mutt-wizard-git
-
   # Patched font SourceCodePro from nerd-fonts library
   - nerd-fonts-source-code-pro
 
@@ -95,9 +89,6 @@
 
   # Unlock GnuPG keys on login
   - pam-gnupg-git
-
-  # Integrate ProtonMail paid account with any program that supports IMAP and SMTP
-  - protonmail-bridge-bin
 
 - shell:
   - [sudo usermod -aG docker $USER && sudo systemctl enable docker.service, Configuring docker service and group]
