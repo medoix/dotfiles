@@ -62,6 +62,9 @@
   # Intelligent WHOIS client
   - whois
 
+  # Manage user directories like ~/Desktop and ~/Music (used by 1Password)
+  - xdg-user-dirs
+
   # A very advanced and programmable command interpreter (shell) for UNIX
   - zsh
 
