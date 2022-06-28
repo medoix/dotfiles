@@ -59,7 +59,7 @@ bindsym $mod+m exec spotify
 # Move between windows
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+l focus up
+bindsym $mod+i focus up
 bindsym $mod+semicolon focus right
 
 # Alternatively, you can use the cursor keys:
@@ -176,6 +176,7 @@ bindsym $mod+Shift+r restart
 
 # Lock screen
 bindsym $mod+Shift+x exec ~/.scripts/lock.sh
+bindsym $mod+l exec ~/.scripts/lock.sh
 
 # Resize window (you can also use the mouse for that)
 mode "resize"
@@ -232,7 +233,6 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 # Startup personal applications
 exec --no-startup-id /usr/bin/1password --silent
-exec --no-startup-id /usr/bin/discord --start-minimized
 exec --no-startup-id /usr/bin/discord --start-minimized
 exec --no-startup-id /usr/bin/steam -silent
 exec --no-startup-id python3 /opt/thefanclub/overgrive/overgrive
