@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
     --
     -- Tokynight Theme (night/dark)
     use 'folke/tokyonight.nvim'
+    use({"catppuccin/nvim", as = "catppuccin"})
 
     -- Git Support --
     --

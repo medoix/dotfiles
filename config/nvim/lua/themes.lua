@@ -4,11 +4,18 @@ local g = vim.g
 local cmd = vim.cmd
 
 function M.setup()
-    M.tokyo_night()
+    M.catppuccin_mocha()
+    -- M.tokyo_night()
     -- M.tokyodark()
     -- M.gruvbox()
     -- M.onedark()
     -- M.highlights()
+end
+
+function M.catppuccin_mocha()
+    g.catppuccin_transparent_background = false
+    g.catppuccin_flavour = "mocha"
+    cmd('colorscheme catppuccin')
 end
 
 function M.tokyodark()
