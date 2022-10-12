@@ -15,7 +15,7 @@ new_window pixel
 new_float pixel
 hide_edge_borders both
 popup_during_fullscreen smart
-for_window [class=¨^.*¨] border pixel 1, title_format ¨<b> %class >> %title </b>¨
+for_window [all] border pixel
 
 # i3-gaps
 gaps inner 8
