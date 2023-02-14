@@ -228,6 +228,7 @@ exec_always --no-startup-id /usr/bin/autorandr --cycle
 exec_always --no-startup-id ~/.scripts/virtual.sh
 exec_always --no-startup-id ~/.scripts/wallpaper-static.sh
 # Startup system applications
+exec --no-startup-id /usr/bin/xss-lock ~/.scripts/lock.sh
 exec --no-startup-id /usr/bin/systemctl --user start pulseaudio.service
 exec --no-startup-id /usr/bin/xfce4-power-manager
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd

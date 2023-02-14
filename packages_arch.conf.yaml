@@ -141,6 +141,9 @@
   # A simple PolicyKit authentication agent for XFCE
   - xfce-polkit-git
 
+  # Use external locker as X screen saver
+  - xss-lock
+
 - shell:
   - [sudo systemctl enable NetworkManager.service && sudo systemctl start NetworkManager.service, Enabling & Starting the NetworkManager Service]
   - [sudo systemctl mask systemd-rfkill.socket && sudo systemctl mask systemd-rfkill.service, Mask TLP Socket and Service]
