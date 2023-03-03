@@ -76,10 +76,10 @@
   - gotop
 
   # A simple terminal UI for docker and docker-compose, written in Go with the gocui library.
-  - lazydocker-git
+  - lazydocker
 
   # A simple terminal UI for git commands
-  - lazygit-git
+  - lazygit
 
   # Patched font SourceCodePro from nerd-fonts library
   - nerd-fonts-source-code-pro
