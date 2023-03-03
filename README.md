@@ -123,7 +123,7 @@ root=/dev/mapper/luksdev rw quiet splash vt.global_cursor_default=0
     sudo pacman -Syu
 ---
 
-- Download [SauceCodePro](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip) font and install the "Windows Compatible" files.
+- Download [SauceCodePro](https://github.com/ryanoasis/nerd-fonts/releases/) font and install the "Windows Compatible" files.
 - In Windows Terminal `settings.json` add `fontFace` and `fontSize` with your font choices.
 
 ---
